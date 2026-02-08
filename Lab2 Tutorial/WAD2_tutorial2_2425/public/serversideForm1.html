@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Basic Form Example</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Serverside Form 1</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clientsideForm.html">Clientside form processing</a></li>
+        <li><a href="serversideForm1.html">Serverside form processing 1</a></li>
+        <li><a href="/serverForm">Serverside form processing 2</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h2>Basic serverside form example</h2>
+      <p>It uses a static html page to display the form.</p>
+      <p>
+        Once the data is sent to the server it can be processed in a number of
+        different ways.
+      </p>
+      <p>
+        You con comment out lines of code in Visual Studio Code to change how
+        the data is processed.
+      </p>
+      <!-- Comment/uncomment the following two lines to process the data in different ways -->
+      <form action="/processForm1a" method="POST">
+        <!-- <form action="/processForm1b" method="POST">   -->
+        <fieldset>
+          <label>Enter your first name</label>
+          <input type="text" name="firstName" required />
+          <br /><br />
+          <label>Enter second name</label>
+          <input type="text" name="surname" required />
+          <br /><br />
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

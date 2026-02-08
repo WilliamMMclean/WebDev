@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Serverside Form 2</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clientsideForm.html">Clientside form processing</a></li>
+        <li><a href="serversideForm1.html">Serverside form processing 1</a></li>
+        <li><a href="/serverForm">Serverside form processing 2</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h2>A second serverside form example</h2>
+      <p>
+        This example uses a Mustache template to generate an html page which
+        includes a form.
+      </p>
+      <p>Data from the form is sent to the server for processing.</p>
+      <p>
+        The response can either be shown on a new page using a new template (
+        see /processForm1b).
+      </p>
+      <p>
+        The response can either be shown on the same page by re-using the form
+        template (/processForm1c).
+      </p>
+      <!-- <form action="/processForm1b" method="POST"> -->
+      <form action="/processForm1c" method="POST">
+        <fieldset>
+          <label>Enter your first name</label>
+          <input type="text" name="firstName" required />
+          <br /><br />
+          <label>Enter second name</label>
+          <input type="text" name="surname" required />
+          <br /><br />
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <div>{{ name }} &nbsp;{{ surname }}</div>
+    </div>
+  </body>
+</html>

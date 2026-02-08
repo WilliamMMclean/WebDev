@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Basic Form Example</title>
+    <script defer src="js/processClient.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Clientside Form</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clientsideForm.html">Clientside form processing</a></li>
+        <li><a href="serversideForm1.html">Serverside form processing 1</a></li>
+        <li><a href="/serverForm">Serverside form processing 2</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h2>Basic clientside form example</h2>
+      <p>This form does not submit data to the server.</p>
+      <p>
+        It uses a static html page to display the form and JavaScript running on
+        the client to process it.
+      </p>
+      <form id="processForm">
+        <fieldset>
+          <label>Enter your first name</label>
+          <input type="text" id="firstName" required />
+          <br /><br />
+          <label>Enter second name</label>
+          <input type="text" id="surname" required />
+          <br /><br />
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <div id="output"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Data</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <body class="container py-5">
+    <h2>Employee List</h2>
+
+    <ul class="list-group mb-3">
+      {{#employee}}
+      <li class="list-group-item">{{ name }} &nbsp; {{ _id }}</li>
+      {{/employee}}
+      {{^employee}}
+      <li class="list-group-item">No employees found.</li>
+      {{/employee}}
+    </ul>
+
+    <a href="/" class="btn btn-secondary">Back to Home</a>
+  </body>
+</html>
+
+

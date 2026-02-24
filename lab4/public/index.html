@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee DB</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+
+  <body class="container py-5">
+    <h1 class="mb-4">Employee Database</h1>
+
+    <!-- Add Employee -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Add Employee</h5>
+        <form action="/add" method="POST" class="d-flex gap-2">
+          <input
+            type="text"
+            name="name"
+            placeholder="Employee Name"
+            class="form-control"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Show All Employees -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Show All Employees</h5>
+        <form action="/showall" method="POST">
+          <button type="submit" class="btn btn-success">Show All</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Show Fred Smith -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Show Fred Smith</h5>
+        <form action="/showFred" method="POST">
+          <button type="submit" class="btn btn-success">Show Fred</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Delete Employee by Name -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Delete Employee</h5>
+        <form action="/delete" method="POST" class="d-flex gap-2">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name to delete"
+            class="form-control"
+            required
+          />
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
